@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Font-size-paragraph: 15px;
+
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+}
+
+h2 {
+    color: var(--White);
+    padding-bottom: 2vh;
+}
+
+p{
+    font-size: var(--Font-size-paragraph);
+    color: var(--Light-Grey);
+}
+
+.card {
+    background-color: var(--Dark-Blue);
+    width: 30vw;
+    max-width: 35vw;
+    margin: 20vh 35vw;
+    padding: 4vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 2vw;
+}
+
+.star {
+    padding-bottom: 4vh;
+    border: 2px solid hsl(214.74deg 10.86% 34.31%);
+    background-color: hsl(217deg 12% 63% / 36%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.star img {
+    width: 20px;
+    margin: 2vh 1vw;
+}
+
+.text {
+    padding: 3vh 0vw;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4vh;
+}
+
+.rating-btn {
+    background-color: #262B3B;
+    border: 1px solid #4D4F5C;
+    border-radius: 50%;
+    color: #FFF;
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.rating-btn:hover{
+    background-color: var(--Orange);
+    color: black;
+}
+
+.rating-btn.active{
+    background-color:var(--White);
+    color: black;
+}
+
+.submit {
+    background-color: var(--Orange);
+    border-radius: 5vw;
+    color: black;
+    width: 24vw;
+    height: 7vh;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border: 2px;
+}
+
+.submit:active{
+    background-color: var(--White);
+}
+
+.thank-you-message{    
+    
+    display: none;
+    background-color: var(--Dark-Blue);
+    width: 30vw;
+    max-width: 35vw;
+    margin: 20vh 35vw;
+    padding: 4vh 3vw;   
+    border-radius: 2vw;
+    text-align: center;
+
+}
+
+p.selected-rating {
+    background-color: #484b52;
+    width: max-content;
+    padding: 1vh 1vw;
+    border-radius: 5vh;
+    color: var(--Orange);
+    margin: 2vh 5vw;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .card, .thank-you-message {
+        width: 40vw;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .rating-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .submit {
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+
